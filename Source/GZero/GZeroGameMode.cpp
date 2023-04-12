@@ -6,10 +6,8 @@
 
 AGZeroGameMode::AGZeroGameMode()
 {
-	// set default pawn class to our Blueprinted character
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/SideScrollerCPP/Blueprints/SideScrollerCharacter"));
-	if (PlayerPawnBPClass.Class != nullptr)
-	{
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/Blueprints/BP_Character"));
+	if (PlayerPawnBPClass.Class != nullptr){
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 }
